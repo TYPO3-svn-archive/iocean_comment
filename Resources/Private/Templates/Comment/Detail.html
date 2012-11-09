@@ -1,0 +1,15 @@
+
+<f:layout name="detail" />
+
+<f:section name="content">
+	<h2>{event.title}</h2>
+	<div class="date">
+		L'événement se déroulera de <f:format.date format="H:i d/m/Y">{event.dateDeb}</f:format.date> à <f:format.date format="H:i d/m/Y">{event.dateFin}</f:format.date>
+	</div>
+	<div class="short">
+		{event.shortDesc}	
+	</div>
+	<div class="long">
+		{event.longDesc}
+	</div>
+</f:section>

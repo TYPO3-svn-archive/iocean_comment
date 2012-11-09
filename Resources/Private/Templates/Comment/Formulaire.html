@@ -1,0 +1,38 @@
+<div class="tx-ioceancomment-pi1">
+	<f:form id="formCommentUpdate" action="add" controller="Comment" objectName="comment" object="{comment}" method="post">
+		<div class="champs champ_input">
+			<label for="name"  class="tx_ioceancomment_pi1_label"><f:translate key="property.name"/><span class="required"><f:translate key="formulaire_labelRequired"/></span></label>
+			<f:form.textfield id="name" property="name" required="1" value="{comment.name}"/>
+		</div>
+		<f:render partial="FormErrorsProperty" arguments="{objectName:'comment',propertyName:'name'}"/>
+		<div class="champs champ_input">
+			<label for="email"  class="tx_ioceancomment_pi1_label"><f:translate key="property.email"/><span class="required"><f:translate key="formulaire_labelRequired"/></span></label>
+			<f:form.textfield id="email" property="email" required="1" value="{comment.email}"/>
+		</div>
+		<f:render partial="FormErrorsProperty" arguments="{objectName:'comment',propertyName:'email'}"/>
+		<div class="champs champ_input">
+			<label for="comment"  class="tx_ioceancomment_pi1_label"><f:translate key="property.comment"/><span class="required"><f:translate key="formulaire_labelRequired"/></span></label>
+			<f:form.textarea id="comment" property="comment" rows="5" cols="50" value="{comment.comment}"/>
+		</div>
+		<f:render partial="FormErrorsProperty" arguments="{objectName:'comment',propertyName:'comment'}"/>
+		<f:if condition="{settings.useCaptcha}">
+			<div class="captcha">
+				<f:if condition="{captchaError}">
+					<p>Error du captcha</p>
+				</f:if>
+				<f:form.textfield id="captcha" name="captcha"/>
+				<f:format.html>{captchaImage}</f:format.html>
+				<f:format.html>{captchaCantRead}</f:format.html>
+			</div>
+			
+		</f:if>
+		<div class="align-center">
+			<f:form.textfield value="{f:translate(key: 'formulaire_labelReset')}" type="reset"/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<f:form.hidden name="uidComment" value="{settings.uidComment}" />
+			<f:form.hidden property="idContent" value="{comment.idContent}" />
+			<f:form.hidden property="tableRef" value="{comment.tableRef}" />
+			<f:form.submit value="{f:translate(key: 'formulaire_labelSubmit')}"/>
+		</div>
+	</f:form>
+</div>

@@ -1,0 +1,22 @@
+
+{namespace c=Tx_IoceanComment_ViewHelpers}
+<c:includeFile path="EXT:iocean_comment/Resources/Public/Css/comment.css"/>
+<f:render section="Message" />
+<div class="tx-ioceancomment-pi1">
+	<f:render partial="Phrase" arguments="{countAllComment:countAllComment,settings:settings}"/>
+	<f:if condition="{countAllComment}">
+		<f:if condition="{settings.displayMini}">
+			<f:then>
+				<f:render section="Mini" />
+			</f:then>
+			<f:else>
+				<f:render section="Content" />
+			</f:else>
+		</f:if>
+	</f:if>
+</div>
+
+
+
+
+

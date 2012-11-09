@@ -1,0 +1,5 @@
+plugin.tx_ioceancomment {
+	displayContentMini = 1
+	useCaptcha = 1
+	groupCaptcha = -1
+}

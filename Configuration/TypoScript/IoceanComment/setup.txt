@@ -1,0 +1,90 @@
+#mettre un script permettant l'ajout des commentaire directement sur tous les contenus de type texte et texte & img
+tt_content.text.30 = CASE
+tt_content.text.30 {
+  key.field = tx_ioceancomment_active
+  1 = USER
+  1  {
+ 	userFunc = tx_extbase_core_bootstrap->run
+	extensionName = IoceanComment
+	pluginName = Pi1
+	settings {
+		table = tt_content
+		displayMini = {$plugin.tx_ioceancomment.displayContentMini}
+		useCaptcha = {$plugin.tx_ioceancomment.useCaptcha}
+		groupCaptcha = {$plugin.tx_ioceancomment.groupCaptcha}
+	}
+  }
+}
+
+#mettre un script permettant l'ajout des commentaire directement sur tous les pages de type standard
+[globalVar = TSFE:page|tx_ioceancomment_active = 1]
+lib.commentPage = USER
+lib.commentPage {
+	userFunc = tx_extbase_core_bootstrap->run
+	extensionName = IoceanComment
+	pluginName = Pi1
+	settings {
+		table = pages
+		displayMini = {$plugin.tx_ioceancomment.displayContentMini}
+		useCaptcha = {$plugin.tx_ioceancomment.useCaptcha}
+		groupCaptcha = {$plugin.tx_ioceancomment.groupCaptcha}
+	}
+}
+[end]
+plugin.tx_ioceancomment {
+	settings {
+		defaultUserImg = fileadmin/templates/images/identite-defaut.gif
+		imageConf{
+			user {
+				maxW = 140
+				maxH = 100
+			}
+		}
+		list {
+			paginate {
+				itemsPerPage = 5
+				insertAbove = 1
+				insertBelow = 0
+			}
+		}
+	}
+	persistence {
+		storagePid = 10
+	}
+}
+
+
+tx_ioceancomment_ajax_html = PAGE
+tx_ioceancomment_ajax_html {
+	typeNum = 450
+	10 = USER
+	10 {
+		userFunc = tx_extbase_core_bootstrap->run
+		extensionName = IoceanComment
+		pluginName = Pi1
+	}
+	config {
+		disableAllHeaderCode = 1
+		additionalHeaders = Content-type:text/html
+		xhtml_cleaning = 0
+		admPanel = 0
+	}
+}
+
+tx_ioceancomment_ajax_json = PAGE
+tx_ioceancomment_ajax_json {
+	typeNum = 451
+	10 = USER
+	10 {
+		userFunc = tx_extbase_core_bootstrap->run
+		extensionName = IoceanComment
+		pluginName = Pi1
+	}
+	config {
+		disableAllHeaderCode = 1
+		#additionalHeaders = Content-type:application/json
+		additionalHeaders = Content-type:text/html
+		xhtml_cleaning = 0
+		admPanel = 0
+	}
+}

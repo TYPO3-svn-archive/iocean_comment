@@ -1,0 +1,101 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_tab.settings</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.table>
+						<TCEforms>
+							<label>LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.tableRef</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+							</config>
+						</TCEforms>
+					</settings.table>
+					<settings.uid>
+						<TCEforms>
+							<label>LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.idContent</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+							</config>
+						</TCEforms>
+					</settings.uid>
+					<settings.prefixeVarUid>
+						<TCEforms>
+							<label>LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.prefixeVarUid</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+							</config>
+						</TCEforms>
+					</settings.prefixeVarUid>
+					<settings.postVarUid>
+						<TCEforms>
+							<label>LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.postVarUid</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+							</config>
+						</TCEforms>
+					</settings.postVarUid>
+					<settings.useCaptcha>
+						<TCEforms>
+							<label>LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.useCaptcha</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.useCaptcha.0</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.useCaptcha.1</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.useCaptcha.2</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.useCaptcha.3</numIndex>
+										<numIndex index="1">-1</numIndex>
+									</numIndex>
+                				</items>
+                				<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.useCaptcha>
+					<settings.groupCaptcha>
+						<TCEforms>
+							<label>LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.groupCaptcha</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.groupCaptcha.any_login</numIndex>
+										<numIndex index="1">-1</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:iocean_comment/Resources/Private/Language/locallang_flex.xml:flexforms_general.groupCaptcha.seperate</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+								</items>
+								<exclusiveKeys>-1</exclusiveKeys>
+								<foreign_table>fe_groups</foreign_table>
+								<foreign_table_where>ORDER BY fe_groups.title</foreign_table_where>
+								<size>7</size>
+								<maxitems>20</maxitems>
+								<default>-1</default>
+							</config>
+						</TCEforms>
+					</settings.groupCaptcha>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

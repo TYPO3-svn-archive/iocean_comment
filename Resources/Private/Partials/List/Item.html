@@ -1,0 +1,46 @@
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="commentSingle {f:if(condition: '{0:settings.success} == {0:commentsItem.uid}', then: 'success')}">
+	
+	<div class="infoPersonne ">
+		<f:if condition="{commentsItem.feUser}">
+			<f:then>
+				<div class="name">
+					{commentsItem.feUser.nomComplet}
+				</div>
+				<f:if condition="{commentsItem.feUser.avatar}">
+					<div class="image">
+						<f:image src="{commentsItem.feUser.avatar}" alt="{commentsItem.feUser.nomComplet}" maxWidth="{settings.imageConf.user.maxW}" maxHeight="{settings.imageConf.user.maxH}"/>
+					</div>
+				</f:if>
+			</f:then>
+			<f:else>
+				<div class="name">
+					{commentsItem.name}
+				</div>
+				<div class="image">
+					<f:image src="EXT:iocean_comment/Resources/Public/Icons/icon_comment.gif" alt="test" maxWidth="{settings.imageConf.user.maxW}" maxHeight="{settings.imageConf.user.maxH}"/>
+				</div>
+			</f:else>
+		</f:if>
+		
+		<div class="date">
+			Le 
+			<f:format.date format="d/m/Y">{commentsItem.tstamp}</f:format.date>
+ 			à 
+ 			<f:format.date format="H:i">{commentsItem.tstamp}</f:format.date>			
+		</div>
+		<div class="hidden"> 
+		<f:link.action action="formulaire" arguments="{table:'tx_ioceancomment_domain_model_comment',uid:commentsItem.uid,uidComment:commentsItem.uidComment}">
+			<f:translate key="index_labelAddCommentToComment" />
+		</f:link.action>
+		</div>
+	</div>
+	<p></p>
+	<div class="commentText">
+		<f:format.html>{commentsItem.comment}</f:format.html>
+	</div>
+	<div class="nettoyeur"></div>
+</div>

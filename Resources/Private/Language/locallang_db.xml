@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'Iocean Gallery'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_ioceancomment_domain_model_comment">Commentaire</label>
+			<label index="tx_ioceancomment_domain_model_comment.crdate">Date de création</label>
+			<label index="tx_ioceancomment_domain_model_comment.tstamp">Date de modification</label>
+			<label index="tx_ioceancomment_domain_model_comment.fe_user">Utilisateur Liée</label>
+			<label index="tx_ioceancomment_domain_model_comment.table_ref">Table Référence</label>
+			<label index="tx_ioceancomment_domain_model_comment.id_content">Id contenu</label>
+			<label index="tx_ioceancomment_domain_model_comment.comment">Commentaire</label>
+			<label index="tx_ioceancomment_domain_model_comment.name">Nom de la personne ayant déposé le commentaire</label>
+			<label index="tx_ioceancomment_domain_model_comment.moderate">Commentaire validé par les administrateur</label>
+			<label index="tx_ioceancomment_domain_model_comment.email">Email de la personne ayant déposé le commentaire</label>
+			<label index="tt_content.tx_ioceancomment_active">Activer les commentaires</label>
+			<label index="pages.tx_ioceancomment_active">Activer les commentaires</label>
+		</languageKey>
+	</data>
+</T3locallang>

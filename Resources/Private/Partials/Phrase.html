@@ -1,0 +1,17 @@
+<p class="phrase">
+	<f:if condition="{countAllComment}">
+		<f:then>
+			<f:translate key="index_msgNbrComment" arguments="{1:countAllComment}"/>
+		</f:then>
+		<f:else>
+			<f:if condition="{settings.table}">
+				<f:then>
+					<f:translate key="index_msgNoComment_{settings.table}"/>
+				</f:then>
+				<f:else>
+					<f:translate key="index_msgNoComment"/>
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+</p>

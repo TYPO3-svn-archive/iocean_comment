@@ -1,0 +1,38 @@
+{
+	success : {success},
+	rows : [
+		<f:for each="{allComment}" as="comment" iteration="ite">
+			<![CDATA[{]]>
+			"id" : {comment.uid},
+			"nom" : "{comment.feUser.nomComplet}",
+			"uri" : "<f:uri.page pageUid="{settings.linkDetail.user}" additionalParams="{tx_ioceanfelogin_pi1: {user : comment.feUser.uid, action : 'detail' controller : 'Felogin'}}"/>",
+			<f:if condition="{comment.feUser.avatar}">
+				<f:then>
+				"image" : "<f:uri.image src="{comment.feUser.avatar}" maxWidth="{settings.imageConf.user.maxW}" maxHeight="{settings.imageConf.user.maxH}"/>",
+				</f:then>
+				<f:else>
+				"image" : "<f:uri.image src="{settings.defaultUserImg}" maxWidth="{settings.imageConf.user.maxW}" maxHeight="{settings.imageConf.user.maxH}"/>",
+				</f:else>
+			</f:if>
+			"date" : "<f:format.date format="U">{comment.tstamp}</f:format.date>",
+			"comment" : {comment.commentJSON}
+			}
+			<f:if condition="{ite.isLast}">
+				<f:then>
+				
+				</f:then>
+				<f:else>
+				,
+				</f:else>
+			</f:if>
+			
+		</f:for>
+	],
+	totalCount : {totalCount}
+	<f:if condition="{toolbarConf}">
+	,toolbarConf : {toolbarConf}
+	</f:if>
+	<f:if condition="{presenceUser}">
+	,presenceUser : {presenceUser}
+	</f:if>
+}

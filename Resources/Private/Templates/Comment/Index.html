@@ -1,0 +1,29 @@
+{namespace c=Tx_IoceanComment_ViewHelpers}
+<f:layout name="Liste" />
+
+<f:section name="Message">
+	
+</f:section>
+
+<f:section name="Content">
+	<div class="commentNormal">
+		<f:for each="{comments}" as="comment" iteration="ite">
+			<f:render partial="List/Item" arguments="{commentsItem: comment, settings:settings}"/>
+		</f:for>
+	</div>
+</f:section>
+<f:section name="Mini">
+	<div class="commentMini">
+		<f:for each="{comments}" as="comment" iteration="ite">
+			<f:render partial="List/Item" arguments="{commentsItem: comment, settings:settings}"/>
+		</f:for>
+	</div>
+</f:section>
+<f:section name="Add">
+	<f:link.action action="formulaire" arguments="{table:settings.table,uid:settings.uid,uidComment:settings.uidComment}">
+		<f:translate key="index_labelAddComment" arguments="{1:countAllComment}"/>
+	</f:link.action>
+</f:section>
+
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for flexform belonging to extension 'iocean_gallery'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="flexforms_tab.settings">Configuration</label>
+			<label index="flexforms_general.tableRef">Table Référence</label>
+			<label index="flexforms_general.idContent">ID content</label>
+			<label index="flexforms_general.prefixeVarUid">prefixeVarUid</label>
+			<label index="flexforms_general.postVarUid">Name variable Post for uid</label>
+			<label index="flexforms_general.useCaptcha">Use captcha for</label>
+			<label index="flexforms_general.useCaptcha.0">Don't use</label>
+			<label index="flexforms_general.useCaptcha.1">User no connect and group in list</label>
+			<label index="flexforms_general.useCaptcha.2">User no connect and group not in list</label>
+			<label index="flexforms_general.useCaptcha.3">All</label>
+			<label index="flexforms_general.groupCaptcha">Group For Force use Captcha</label>
+			<label index="flexforms_general.groupCaptcha.any_login">Any Login</label>
+			<label index="flexforms_general.groupCaptcha.seperate">-------------</label>
+		</languageKey>
+	</data>
+</T3locallang>

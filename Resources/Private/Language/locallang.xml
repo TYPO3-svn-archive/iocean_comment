@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the blog_example extension</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<!-- partie index -->
+			<label index="index_msgNbrComment">Il y en as %s pour ce contenu</label>
+			<label index="index_msgNoComment">Aucun commentaire pour cette élément</label>
+			<label index="index_msgNoComment_tt_content">Aucun commentaire pour ce contenu</label>
+			<label index="index_msgNoComment_pages">Aucun commentaire pour cette page</label>
+			<label index="index_labelAddComment">Ajouter un commentaire</label>
+			<label index="index_labelAddCommentToComment">Ajouter une réponse</label>
+			<!-- partie formulaire -->
+			<label index="formulaire_labelRequired"> * </label>
+			<label index="formulaire_labelSubmit">Enregistrer</label>
+			<label index="formulaire_labelReset">Annuler</label>
+			
+			<!-- partie add -->
+			<label index="add_labelOk">Ajout d'un commentaire</label>
+			<label index="add.msgOk">Le commentaire a bien été ajouté.</label>
+			<label index="add_labelErrorForm">Il existe des erreurs dans le formulaire</label>
+			<label index="add_msgErrorName">Le champ "Name" est obligatoire</label>
+			<label index="add_msgErrorEmail">Le champ "Email" est obligatoire</label>
+			<label index="add_msgErrorComment">Le champ "Comment" est obligatoire</label>
+			<label index="add_msgErrorFormatEmail">L'adresse email à un format incorect</label>
+			<label index="add_labelErrorConf">Erreur de configuration</label>
+			<label index="add_msgErrorConf">Il manque des données pour effectué l'opération</label>
+
+			<!-- partie error -->
+			<label index="error.code.1221559976">Le champ %s n'est pas une adresse email valide</label>
+			<label index="error.code.1221560718">Le champ %s est obligatoire</label>
+			<!-- partie property -->
+			<label index="property.name">Name</label>
+			<label index="property.email">Email</label>
+			<label index="property.comment">Commentaire</label>
+						
+			<label index="extjs_comment_titlePanel">Commentaire</label>
+			<label index="extjs_comment_pagingDisplayMsg">Commentaire {0} à {1} sur {2}</label>
+			<label index="extjs_comment_pagingEmptyMsg">Aucun commentaire</label>
+			<label index="extjs_comment_templateDateDeb">Le </label>
+			<label index="extjs_comment_templateDateFin"> à </label>
+			<label index="extjs_comment_labelButtonAdd">Ajouter un commentaire</label>
+			<label index="extjs_comment_labelWindowTitle">Formulaire d'ajout de commentaire</label>
+			<label index="extjs_comment_labelFieldComment">Commentaire</label>
+			<label index="extjs_comment_labelSave">Sauvegarder votre commentaire</label>
+			<label index="extjs_comment_labelPatientez">Veuillez patientez pendant l'ajout du commentaire</label>
+			<label index="extjs_comment_labelOK">OK</label>
+			<label index="extjs_comment_labelERROR">ERROR</label>
+		</languageKey>
+		
+	</data>
+</T3locallang>

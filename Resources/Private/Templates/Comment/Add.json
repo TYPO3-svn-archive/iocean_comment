@@ -1,0 +1,5 @@
+<![CDATA[{]]>
+	success : <f:if condition="{success}"><f:then>true</f:then><f:else>false</f:else></f:if>,
+	msg : "{msg}",
+	confDefault : {confDefault},
+}
